@@ -13,3 +13,10 @@
   inherits: false;
   initial-value: #0000;
 }
+
+@property --move-right {
+  syntax: "<length>";
+  inherits: true;
+  /*initial-value: 0px;*/
+  width: 100%;
+}

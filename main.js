@@ -10,7 +10,7 @@ async function fetchProducts() {
     productList.innerHTML = "";
     products.forEach(product => {
       const card = document.createElement("div");
-      card.className = "bg-sky-100/70 p-4 rounded-2xl shadow-2xl transition ease-out duration-300 hover:shadow-cyan-50/50 hover:bg-sky-100 hover:scale-105";
+      card.className = "bg-sky-100/70 p-4 rounded-2xl shadow-2xl transition ease-out duration-300 snap-center hover:shadow-cyan-50/50 hover:bg-sky-100 hover:scale-105";
       card.innerHTML = `
         <img src="${product.image}" alt="${product.title}" class="w-full h-48 object-contain mb-3"/>
         <h2 class="text-lg font-semibold line-clamp-2">${product.title}</h2>

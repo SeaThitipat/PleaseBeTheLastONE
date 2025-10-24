@@ -25,8 +25,13 @@ async function fetchProducts() {
           <span class="text-blue-600 font-bold ">$${product.price}</span>
           <span class="text-sm text-gray-500">${product.category}</span>
         </div>
-        <button class="w-full mt-2 content-end bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition">Add to Cart
-        </button>
+        <div class="flex justify-center">
+          <button class="w-1/2 mt-2 content-end bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition">Add to Cart
+          </button>
+          <button id = "product_more!" class="w-1/2 mt-2 content-end bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition">View Detail
+          </button>
+          <script src = "product_detail.js"></script>
+        </div>
       `;
       productList.appendChild(card);
     });

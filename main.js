@@ -1,10 +1,4 @@
-/* transition duration-300 hover:ease-(--move-right)
-==> we gonna continue this thing later tmr (24/10/68)
-==> i want that card expand to right smoothly when hover! */
 
-
-
-//this file insert into try_to_build_web.html in listing products section!
 const productList = document.getElementById("product-list");
 
 async function fetchProducts() {
@@ -12,7 +6,7 @@ async function fetchProducts() {
     const res = await fetch("https://fakestoreapi.com/products");
     const products = await res.json();
 
-    //show fking products
+    //show products
     productList.innerHTML = "";
     products.forEach(product => {
       const card = document.createElement("div");
@@ -28,9 +22,9 @@ async function fetchProducts() {
         <div class="flex justify-center">
           <button class="w-1/2 mt-2 content-end bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition">Add to Cart
           </button>
-          <button id = "product_more!" class="w-1/2 mt-2 content-end bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition">View Detail
+          <button class="w-1/2 mt-2 content-end bg-blue-500 text-white py-2 rounded-xl hover:bg-blue-600 transition"
+            onclick="location.href='more_detail_product.html?id=${product.id}'">View Detail
           </button>
-          <script src = "product_detail.js"></script>
         </div>
       `;
       productList.appendChild(card);
@@ -40,6 +34,5 @@ async function fetchProducts() {
     productList.innerHTML = `<p class="text-center text-red-500">error can't load product</p>`;
   }
 }
-
 
 fetchProducts();

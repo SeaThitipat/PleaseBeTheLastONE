@@ -4,9 +4,6 @@
 
 
 
-
-
-
 //this file insert into try_to_build_web.html in listing products section!
 const productList = document.getElementById("product-list");
 

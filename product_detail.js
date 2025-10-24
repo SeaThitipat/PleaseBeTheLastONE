@@ -5,6 +5,7 @@ const titleEl = document.getElementById("product-title");
 const priceEl = document.getElementById("product-price");
 const categoryEl = document.getElementById("product-category");
 const descEl = document.getElementById("product-description");
+const productHeadId = document.getElementById("productHeadId");
 
 function getProductIdFromUrl() {
   const params = new URLSearchParams(window.location.search);
@@ -30,6 +31,7 @@ async function loadProductDetail() {
       imgEl.width = 100;
       imgEl.height = 100;
     }
+    if (productHeadId) productHeadId.textContent = product.title;
     if (idEl) idEl.textContent = `product id : ${product.id}`;
     if (titleEl) titleEl.textContent = product.title;
     if (priceEl) priceEl.textContent = `$${product.price}`;
